@@ -4,6 +4,7 @@ def rle_encode(data):
         last_datum = next(data)
         count = 1
         for datum in data:
+            print(datum)
             if last_datum == datum:
                 count += 1
             else:
@@ -19,3 +20,4 @@ def rle_decode(data):
     for datum, count in data:
         for _ in range(count):
             yield datum
+

@@ -20,3 +20,10 @@ def binary_search(students, id):
         else:
             return students[middle]
     return None
+class Student:
+    def __init__(self, id):
+        self.id = id
+
+list = [Student(x) for x in range(1, 101)]
+
+print(binary_search(list, 5).id)

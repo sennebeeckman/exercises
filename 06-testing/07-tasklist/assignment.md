@@ -8,9 +8,9 @@ We do not provide any way to validate your work, as you'll be writing your own t
 
 In a file `tasks.py`, write a class `Task`.
 
-* It has a readonly property `description` that is initialized using a constructor parameter.
-* It has a readonly property `due_date` that is initialized using a constructor parameter.
-* It has a settable field `finished` which is initially set to `False`.
+- It has a readonly property `description` that is initialized using a constructor parameter.
+- It has a readonly property `due_date` that is initialized using a constructor parameter.
+- It has a settable field `finished` which is initially set to `False`.
 
 To represent dates, we use the standard `date` class from the [`datetime` module](https://docs.python.org/3/library/datetime.html).
 
@@ -38,19 +38,19 @@ True
 A `TaskList` keeps track of a list of `Task`s.
 It offers the following functionality:
 
-* `TaskList()` creates an empty task list.
-* `task_list.add_task(task)` adds a `Task` to the list.
+- `TaskList()` creates an empty task list.
+- `task_list.add_task(task)` adds a `Task` to the list.
   The `Task`'s `due_date` must be in the future.
   In case its `due_date` is in the past, a `RuntimeErrror` should be thrown.
-* `len(task_list)` gives the number of tasks in the list.
-* `task_list.finished_tasks` returns a list of all finished tasks, i.e., those tasks whose `task.finished` is `True`.
-* `task_list.due_tasks` returns a list of all unfinished tasks, i.e., those tasks whose `task.finished` is `False`.
-* `task_list.overdue_tasks` returns a list of all unfinished tasks whose `task.due_date` is in the past.
+- `len(task_list)` gives the number of tasks in the list.
+- `task_list.finished_tasks` returns a list of all finished tasks, i.e., those tasks whose `task.finished` is `True`.
+- `task_list.due_tasks` returns a list of all unfinished tasks, i.e., those tasks whose `task.finished` is `False`.
+- `task_list.overdue_tasks` returns a list of all unfinished tasks whose `task.due_date` is in the past.
 
 In order to implement the `overdue_tasks` property, you'll need the following `date` functionality:
 
-* You can use `<` to compare dates. If `date1 < date2` evaluates to `True`, this means that `date1` takes place before `date2`.
-* Getting today's date (i.e., the date at the time the code is executed) is done using `date.today()`.
+- You can use `<` to compare dates. If `date1 < date2` evaluates to `True`, this means that `date1` takes place before `date2`.
+- Getting today's date (i.e., the date at the time the code is executed) is done using `date.today()`.
 
 Example usage:
 
